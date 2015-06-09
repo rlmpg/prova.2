@@ -15,6 +15,19 @@ public class Ponto {
      * Retorna no nome não-qualificado da classe.
      * @return O nome não qualificado da classe.
      */
+    
+    public Ponto() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+    }
+    
+    public Ponto(double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    
     public String getNome() {
         return getClass().getSimpleName();
     }
@@ -42,6 +55,17 @@ public class Ponto {
     public void setZ(double z) {
         this.z = z;
     }
+    
+    public double dist(Ponto p) {
+        double distancia;
+        
+        distancia = Math.sqrt(Math.pow(this.getX() - p.getX(), 2) 
+                + Math.pow(this.getY() - p.getY(), 2) 
+                + Math.pow(this.getZ() - p.getZ(), 2));
+        
+        return distancia;
+    }
+    
 
     @Override
     public int hashCode() {
@@ -51,5 +75,18 @@ public class Ponto {
         hash = 79 * hash + (int) (Double.doubleToLongBits(this.z) ^ (Double.doubleToLongBits(this.z) >>> 32));
         return hash;
     }
-
+    
+    @Override
+    public String toString() {
+        String nome;
+        
+        nome = getNome() + "(" + getX() + "," + getY() + "," + getZ() + ")";
+        
+        return nome;
+    }
+    
+    public boolean equals(Ponto p) {
+        return this.getX() == p.getX() && this.getY() == p.getY() && this.getZ() == p.getZ();
+    }
+    
 }
