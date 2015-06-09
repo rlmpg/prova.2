@@ -14,6 +14,11 @@ public class Avaliacao2 {
 
     public static void main(String[] args) {
         
+        /* No programa principal, instancie uma poligonal fechada no plano XZ
+        com os vértices de coordenadas (x, z), (-3,2), (-3,6) e (0,2), calcule
+        e exiba o comprimento. O programa deve exibir uma mensagem no formato 
+        "Comprimento da poligonal = 123,456". */
+        
         PoligonalFechada poligonal = new PoligonalFechada(3);
         PontoXZ zero = new PontoXZ(-3,2);
         PontoXZ um = new PontoXZ(-3,6);

@@ -76,7 +76,7 @@ public class Poligonal {
         double comprimento = 0;
         
         for(i = 0; i < vertices.length -1; i++)
-            comprimento += vertices[i].dist(vertices[i+1]);
+            comprimento = comprimento + this.get(i).dist(this.get(i+1));
 
         return comprimento;
     }

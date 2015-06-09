@@ -78,15 +78,19 @@ public class Ponto {
     
     @Override
     public String toString() {
-        String nome;
-        
-        nome = getNome() + "(" + getX() + "," + getY() + "," + getZ() + ")";
-        
-        return nome;
+        return String.format("%(%,%,%)",getNome(), getX(), getY(), getZ());
     }
     
     public boolean equals(Ponto p) {
-        return this.getX() == p.getX() && this.getY() == p.getY() && this.getZ() == p.getZ();
+        if(p == null || this == null)
+            return false;
+        if(p.getClass() == Ponto.class && this.getClass() == Ponto.class) {
+            if(this.getX() == p.getX() && this.getY() == p.getY() && this.getZ() == p.getZ())
+                return true;
+            else
+                return false;
+        }
+        return false;
     }
     
 }

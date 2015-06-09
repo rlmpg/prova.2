@@ -21,9 +21,7 @@ public class PontoXY extends Ponto2D {
     
     @Override
     public String toString() {
-        String nome;
-        nome = getNome() + "(" + getX() + "," + getY() + ")";
-        return nome;
+        return String.format("%(%,%)",getNome(), getX(), getY());
     }
     
 }
