@@ -7,8 +7,7 @@ import utfpr.ct.dainf.if62c.avaliacao.*;
  * DAINF - Departamento Acadêmico de Informática
  * IF62C - Fundamentos de Programação 2
  * 
- * Segunda avaliação parcial 2014/2.
- * @author andreiaskoda
+ * @author Chin
  */
 public class Avaliacao2 {
 
